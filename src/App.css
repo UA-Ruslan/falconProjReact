@@ -5,6 +5,7 @@
 
 html {
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -14,7 +15,7 @@ body {
 }
 
 .app {
+    max-width: 1440px;
     width: 100%;
-    background: red;
     margin: 0 auto;
 }

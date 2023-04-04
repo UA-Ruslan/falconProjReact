@@ -1,30 +1,374 @@
 @import "../../templates/Templates";
+@import "../../veriables/Veriables";
+
 .firstSection {
   min-width: 100%;
+  padding: 38px 102px 100px 102px;
+  max-height: 750px;
+  min-height: 750px;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
 
   .header {
     min-width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 55px;
 
     .headerTitle {
-      a {
+      padding-top: 10px;
+
+      .linkStyle {
         @extend %hrefParams;
+        @extend %fontSize15;
+        color: $blackColor;
+        font-weight: 700;
+        letter-spacing: 4px;
+        font-size: 19px;
+
         &:hover {
-         color: wheat;
+          color: $YellowColor;
         }
       }
     }
 
-    .navWrapper {
-      a {
-       @extend %hrefParams;
+    //---------------------------------------burger menu------------------------//
+    .burger {
+      display: none;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      top: 0%;
+      right: 0%;
+
+      .burgerItem {
+        height: 7px;
+        width: 50px;
+        background: rgb(112, 116, 140);
+        position: absolute;
+        top: -200px;
+        left: 0%;
+
+        &:last-child {
+          width: 25px;
+        }
+      }
+
+      .item1 {
+        animation-name: item1;
+        animation-iteration-count: 1;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+      }
+
+      @keyframes item1 {
+        0% {
+
+          top: -200px;
+          left: 0%;
+        }
+        100% {
+          position: absolute;
+          top: 10%;
+          left: 0%;
+        }
+      }
+
+      .item2 {
+        animation-name: item2;
+        animation-iteration-count: 1;
+        animation-delay: .2s;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+      }
+
+      @keyframes item2 {
+        0% {
+
+          top: -200px;
+          left: 0%;
+        }
+        100% {
+          position: absolute;
+          top: 30%;
+          left: 0%;
+        }
+      }
+
+      .item3 {
+        animation-name: item3;
+        animation-iteration-count: 1;
+        animation-delay: 1.4s;
+        animation-fill-mode: forwards;
+        animation-duration: .6s;
+      }
+
+      @keyframes item3 {
+        0% {
+          top: 50%;
+          left: 300px;
+        }
+        100% {
+          position: absolute;
+          top: 50%;
+          left: 0;
+        }
+      }
+
+      .item3Anim {
+        height: 7px;
+        width: 25px;
+        background: rgb(112, 116, 140);
+        animation-name: item3Anim;
+        animation-iteration-count: 2;
+        animation-fill-mode: forwards;
+        animation-duration: .4s;
+      }
+
+      @keyframes item3Anim {
+        0% {
+          top: 50%;
+          left: 0;
+
+        }
+
+        50% {
+          top: 50%;
+          left: 25px;
+
+        }
+
+        100% {
+          top: 50%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  //---------------------------------------burger menu------------------------//
+  .contentWrapper {
+
+    .pWrapper {
+      margin-bottom: 34px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 24px;
+      color: #70748C;
+    }
+
+    .firstSectionTitle {
+      & p {
+        margin: 0 0 122px 0;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 111px;
+        line-height: 115px;
+        letter-spacing: 7px;
+        @media screen and (max-width: 1330px) {
+          & {
+            font-size: 80px;
+            line-height: 85px;
+          }
+        }
       }
     }
 
-  }
+    .btnWrapper {
+      .btnFirstSection {
+        color: $blackColor;
+        border: 1px solid $YellowColor;
+        transition: $transition_0_2s;
+        width: 188px;
+        height: 68px;
+        border-radius: 4px;
+        background: $YellowColor;
 
-  .contentWrapper {
-
+        &:hover {
+          color: $WhiteColor;
+          background: rgb(57, 55, 55);
+          border: 1px solid rgb(57, 55, 55);
+          transform: scale(1.1);
+          transition: $transition_0_2s;
+        }
+      }
+    }
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .firstSection {
+    padding: 50px;
+
+    .header {
+
+      .burger {
+        display: block;
+      }
+    }
+
+    .contentWrapper {
+      .firstSectionTitle {
+        p {
+          margin: 0 0 60px 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .imgCar1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 745px) {
+  .firstSection {
+    .contentWrapper {
+      .firstSectionTitle {
+        p {
+          font-size: 60px;
+          line-height: 65px;
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+  .imgCar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .firstSection {
+    padding: 25px;
+
+    .contentWrapper {
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+
+      .firstSectionTitle {
+        p {
+          font-size: 30px;
+          line-height: 35px;
+        }
+      }
+
+      .btnWrapper {
+        button {
+          max-height: 40px;
+          max-width: 150px;
+        }
+      }
+    }
+  }
+  .imgCar2 {
+    position: absolute;
+    top: 81%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: $transition_1s;
+  }
+
+  .imgBlock {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: $transition_1s;
+  }
+
+  .imgBlock1 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: $transition_1s;
+  }
+}
+
+
+//------------------------------car anim--------------------------------//
+
+.imgBlock {
+  position: absolute;
+  top: 0;
+  right: 8%;
+  z-index: -1;
+  transition: $transition_1s;
+}
+
+.newImgBlock {
+  top: -500px;
+  transition: $transition_1s;
+}
+
+.imgBlock1 {
+  position: absolute;
+  top: 70%;
+  right: 8%;
+  z-index: -1;
+  transition: $transition_1s;
+}
+
+.newImgBlock1 {
+  top: 101%;
+  transition: $transition_1s;
+}
+
+.imgCar {
+  position: absolute;
+  top: 0;
+  left: 18%;
+  z-index: -1;
+  transition: $transition_1s;
+}
+
+.newImgCar {
+  top: -400px;
+  transition: $transition_1s;
+}
+
+.imgCar1 {
+  position: absolute;
+  top: 67%;
+  left: 43%;
+  z-index: -1;
+  transition: $transition_1s;
+}
+
+.newImgCar1 {
+  top: 101%;
+  transition: $transition_1s;
+}
+
+.imgCar2 {
+  position: absolute;
+  top: 81%;
+  right: 10%;
+  z-index: -1;
+  transition: $transition_1s;
+}
+
+.newImgCar2 {
+  transition: $transition_1s;
+  top: 61%;
+}
+
+//------------------------------------------------------------------------------//
+
+
+

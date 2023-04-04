@@ -1,0 +1,184 @@
+@import "../../veriables/Veriables";
+@import "../../templates/Templates";
+
+.secondSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  background: #F9FBFD;
+  padding: 126px 94px 97px 204px;
+  min-height: 902px;
+
+  .cameraBtnWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 81px;
+
+    .getToNowWrapper {
+
+      .title {
+        p {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 44px;
+          line-height: 50px;
+          margin-bottom: 25px;
+        }
+      }
+
+      .txtWrapper {
+        p {
+          @extend %fontSize15;
+          margin-bottom: 58px;
+          color: $greyBlueColor;
+        }
+      }
+
+      .btnWrapper {
+        button {
+          width: 271px;
+          height: 60px;
+          background: #F9FBFD;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 18px;
+          transition: $transition_0_2s;
+          border: 1px solid $greyBlueColor;
+          border-radius: 4px;
+
+          &:hover {
+            background: $greyBlueColor;
+            transition: $transition_0_2s;
+            color: $WhiteColor;
+          }
+        }
+      }
+
+    }
+
+    .cameraWrapper {
+      display: flex;
+      justify-content: center;
+
+      img {
+        min-width: 250px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .contentWrapper {
+    display: flex;
+
+    .contentItem {
+      margin-right: 83px;
+
+      .iconWrapper {
+        margin-bottom: 27px;
+      }
+
+      .pWrapper1 {
+        p {
+          margin: 0 0 21px 0;
+          @extend %fontSize18;
+          color: $blackColor
+        }
+      }
+
+      .pWrapper2 {
+        p {
+          margin: 0;
+          @extend %fontSize15;
+          color: $greyBlueColor
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1224px) {
+  .secondSectionWrapper {
+    padding: 90px 94px 97px 90px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .secondSectionWrapper {
+    padding: 90px 94px 97px 90px;
+
+    .cameraBtnWrapper {
+      flex-direction: column-reverse;
+
+      .getToNowWrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+
+        .title {
+          p {
+
+          }
+        }
+
+        .txtWrapper {
+          p {
+            margin: 15px 0;
+          }
+        }
+
+        .btnWrapper {
+          button {
+            margin: 70px 0 30px 0;
+          }
+        }
+      }
+    }
+
+    .contentWrapper {
+      display: flex;
+
+      .contentItem {
+        margin-right: 30px;
+
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .secondSectionWrapper {
+    padding: 90px 30px 97px 30px;
+  }
+  .contentWrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .contentItem {
+      margin: 0 0 50px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .secondSectionWrapper .cameraBtnWrapper .getToNowWrapper .title {
+    p {
+          font-size: 25px;
+    }
+  }
+  .secondSectionWrapper .cameraBtnWrapper .getToNowWrapper .btnWrapper {
+    button {
+      width: 150px;
+      height: 40px;
+      background: #F9FBFD;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 12px;
+    }
+  }
+}
+
+
