@@ -1,0 +1,30 @@
+@import "../../templates/Templates";
+.firstSection {
+  min-width: 100%;
+
+  .header {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .headerTitle {
+      a {
+        @extend %hrefParams;
+        &:hover {
+         color: wheat;
+        }
+      }
+    }
+
+    .navWrapper {
+      a {
+       @extend %hrefParams;
+      }
+    }
+
+  }
+
+  .contentWrapper {
+
+  }
+}
