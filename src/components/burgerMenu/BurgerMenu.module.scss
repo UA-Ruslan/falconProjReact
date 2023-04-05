@@ -27,7 +27,7 @@
       border-radius: 4px;
 
       &:hover {
-        color: $WhiteColor;
+        color: $whiteColor;
         background: rgb(57, 55, 55);
         border: 1px solid rgb(57, 55, 55);
         transform: scale(1.1);
@@ -79,6 +79,7 @@
       transform: rotate(45deg);
       color: rgb(112, 116, 140);
       transition: $transition_0_5s;
+      margin-right: 30px;
 
       &:hover {
         transform: rotate(-135deg);
