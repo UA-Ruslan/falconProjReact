@@ -6,13 +6,14 @@ import car from "../../img/firstSection/car.png"
 import block from "../../img/firstSection/yellow_block.png"
 import block1 from "../../img/firstSection/yellow_block1.png"
 import BurgerMenu from "../burgerMenu/BurgerMenu";
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
-
-const FirstSection = () => {
+const FirstSection = (props) => {
     const [headerBtnActive, setHeaderBtnActive] = useState(false);
     const [firstSectionBtnActive, setFirstSectionBtnActive] = useState(false);
     const [isBurgerBtnActive, setBurgerBtnActive] = useState(false);
     const [isBurgerMenuActive, setBurgerMenuActive] = useState(false);
+
     const mouseOver = () => {
         setHeaderBtnActive(true)
     };
@@ -38,58 +39,67 @@ const FirstSection = () => {
         setBurgerMenuActive(false)
     }
     return (
-            <div className={style.firstSection}>
-                <div className={style.header}>
-                    <div className={style.headerTitle}>
-                        <a className={style.linkStyle} href="#">VADE</a>
-                    </div>
-
-                    <BurgerMenu
-                        isBurgerMenuActive={isBurgerMenuActive}
-                        mouseOut={mouseOut}
-                        mouseOver={mouseOver}
-                        burgerMenuInactive={burgerMenuInactive}
-                    />
-
-                    <div onClick={burgerMenuActive} onMouseOver={mouseOverBurger} onMouseOut={mouseOutBurger}
-                         className={style.burger}>
-                        <div className={`${style.burgerItem} ${style.item1}`}></div>
-                        <div className={`${style.burgerItem} ${style.item2}`}></div>
-                        <div
-                            className={isBurgerBtnActive ? style.item3Anim + " " + style.burgerItem : style.burgerItem + " " + style.item3}></div>
-
-                    </div>
+        <div className={style.firstSection}>
+            <div className={style.header}>
+                <div className={style.headerTitle}>
+                    <a className={style.linkStyle} href="#">VADE</a>
                 </div>
-                <div className={style.contentWrapper}>
-                    <div className={style.firstSectionTitle}>
+
+                <BurgerMenu
+                    setBurgerMenuActive={setBurgerMenuActive}
+                    isBurgerMenuActive={isBurgerMenuActive}
+                    mouseOut={mouseOut}
+                    mouseOver={mouseOver}
+                    burgerMenuInactive={burgerMenuInactive}
+                    arrID={props.arrID}
+                />
+
+                <div onClick={burgerMenuActive} onMouseOver={mouseOverBurger} onMouseOut={mouseOutBurger}
+                     className={style.burger}>
+                    <div className={`${style.burgerItem} ${style.item1}`}></div>
+                    <div className={`${style.burgerItem} ${style.item2}`}></div>
+                    <div
+                        className={isBurgerBtnActive ? style.item3Anim + " " + style.burgerItem : style.burgerItem + " " + style.item3}></div>
+                </div>
+            </div>
+            <div className={style.contentWrapper}>
+                <div className={style.firstSectionTitle}>
+                    <AnimationOnScroll initiallyVisible={true} animateIn="animate__shakeX">
                         <p>Connecting the curb <br/> to new insights</p>
-                    </div>
-                    <div className={style.pWrapper}>
+                    </AnimationOnScroll>
+                </div>
+                <div className={style.pWrapper}>
+                    <AnimationOnScroll delay={150} initiallyVisible={true} animateIn="animate__shakeX">
                         <p>
                             Real-time curb data for smart cities. Measure <br/> occupancy, analyze
                             demand,
                             and
                             manage curb space<br/> with the right tools.
                         </p>
-                    </div>
-                    <div className={style.btnWrapper}>
+                    </AnimationOnScroll>
+                </div>
+                <div className={style.btnWrapper}>
+                    <AnimationOnScroll delay={300} initiallyVisible={true} animateIn="animate__shakeX">
                         <button onMouseOver={mouseOver1} onMouseOut={mouseOut1} className={style.btnFirstSection}>Book a
                             demo
                         </button>
-                    </div>
+                    </AnimationOnScroll>
                 </div>
-                <img className={headerBtnActive ? style.imgCar1 + " " + style.newImgCar1 : style.imgCar1} src={car1}
-                     alt="img"/>
-                <img className={firstSectionBtnActive ? style.imgCar2 + " " + style.newImgCar2 : style.imgCar2}
-                     src={car2}
-                     alt="img"/>
-                <img className={headerBtnActive ? style.imgCar + " " + style.newImgCar : style.imgCar} src={car}
-                     alt="img"/>
-                <img className={firstSectionBtnActive ? style.imgBlock + " " + style.newImgBlock : style.imgBlock}
-                     src={block} alt="img"/>
-                <img className={firstSectionBtnActive ? style.imgBlock1 + " " + style.newImgBlock1 : style.imgBlock1}
-                     src={block1} alt="img"/>
+
+
             </div>
+            <img className={headerBtnActive ? style.imgCar1 + " " + style.newImgCar1 : style.imgCar1} src={car1}
+                 alt="img"/>
+            <img className={firstSectionBtnActive ? style.imgCar2 + " " + style.newImgCar2 : style.imgCar2}
+                 src={car2}
+                 alt="img"/>
+            <img className={headerBtnActive ? style.imgCar + " " + style.newImgCar : style.imgCar} src={car}
+                 alt="img"/>
+            <img className={firstSectionBtnActive ? style.imgBlock + " " + style.newImgBlock : style.imgBlock}
+                 src={block} alt="img"/>
+            <img className={firstSectionBtnActive ? style.imgBlock1 + " " + style.newImgBlock1 : style.imgBlock1}
+                 src={block1} alt="img"/>
+        </div>
     )
 }
 

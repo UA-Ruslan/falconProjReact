@@ -1,18 +1,19 @@
 import style from "./BurgerMenu.module.scss";
 
 const BurgerMenu = (props) => {
-
-
+const onClick = () => {
+    props.setBurgerMenuActive(false)
+}
     return (
 
         <div className={props.isBurgerMenuActive ? style.burgerMenu + " " + style.burgerMenuActive : style.burgerMenu}>
             <div className={style.hrefWrapper}>
-                <a className={style.linkStyle} href="#">technology</a>
-                <a className={style.linkStyle} href="#">about us</a>
-                <a className={style.linkStyle} href="#">impact</a>
-                <a className={style.linkStyle} href="#">portfolio</a>
-                <a className={style.linkStyle} href="#">blog</a>
-                <button onMouseOver={props.mouseOver} onMouseOut={props.mouseOut} className={style.headerBtn}>book a demo
+                <a onClick={onClick} className={style.linkStyle} href={`#${props.arrID[0]}`}>technology</a>
+                <a onClick={onClick} className={style.linkStyle} href={`#${props.arrID[1]}`}>about us</a>
+                <a onClick={onClick} className={style.linkStyle} href={`#${props.arrID[2]}`}>impact</a>
+                <a onClick={onClick} className={style.linkStyle} href={`#${props.arrID[3]}`}>portfolio</a>
+                <a onClick={onClick} className={style.linkStyle} href={`#${props.arrID[4]}`}>blog</a>
+                <button onClick={onClick} onMouseOver={props.mouseOver} onMouseOut={props.mouseOut} className={style.headerBtn}>book a demo
                 </button>
             </div>
             <div>

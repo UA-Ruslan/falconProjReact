@@ -1,20 +1,24 @@
 import React from "react";
 import style from "./FifthSection.module.scss";
 import icon from "../../img/fifthSection/icon_fifth_section.png";
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const FifthSection = () => {
     return (
         <div className={style.fifthSectionWrapper}>
             <div className={style.contentWrapper}>
                 <p>
-                    <span>Curb</span> management can help ensure that <br/> curb space is allocated more equitably, <br/> providing
+                    <span>Curb</span> management can help ensure that <br/> curb space is allocated more
+                    equitably, <br/> providing
                     access to
                     this limited <br/> resource to all street users, including <br/> our most vulnerable.”
                 </p>
             </div>
             <div className={style.iconDescriptionWrapper}>
                 <div className={style.iconWrapper}>
-                    <img src={icon} alt="icon"/>
+                    <AnimationOnScroll animateIn="animate__rubberBand">
+                        <img src={icon} alt="icon"/>
+                    </AnimationOnScroll>
                 </div>
                 <div className={style.pWrapper}>
                     <div className={style.descriptionWrapper1}>

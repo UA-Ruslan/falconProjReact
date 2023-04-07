@@ -7,12 +7,12 @@ import icon5 from "../../img/forthSection/walker.png"
 import icon6 from "../../img/forthSection/california.png"
 import icon7 from "../../img/forthSection/premium_parking.png"
 import icon8 from "../../img/forthSection/signature.png"
-
 import style from "./ForthSection.module.scss"
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
-const ForthSection = () => {
+const ForthSection = (props) => {
     return (
-        <div className={style.forthSectionWrapper}>
+        <div id={props.id} className={style.forthSectionWrapper}>
             <div className={style.titleWrapper}>
                 <p>
                     Trusted by leaders in <br/> urban transportation
@@ -33,30 +33,46 @@ const ForthSection = () => {
             <div className={style.iconWrapper}>
                 <div className={style.iconBlockWrapper}>
                     <div className={style.iconWrapper}>
-                        <img src={icon1} alt="icon"/>
+                        <AnimationOnScroll animateIn="animate__wobble">
+                            <img src={icon1} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon2} alt="icon"/>
+                        <AnimationOnScroll delay={100} animateIn="animate__wobble">
+                            <img src={icon2} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon3} alt="icon"/>
+                        <AnimationOnScroll delay={200} animateIn="animate__wobble">
+                            <img src={icon3} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon4} alt="icon"/>
+                        <AnimationOnScroll delay={300} animateIn="animate__wobble">
+                            <img src={icon4} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                 </div>
                 <div className={style.iconBlockWrapper}>
                     <div className={style.iconWrapper}>
-                        <img src={icon5} alt="icon"/>
+                        <AnimationOnScroll animateIn="animate__wobble">
+                            <img src={icon5} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon6} alt="icon"/>
+                        <AnimationOnScroll delay={100} animateIn="animate__wobble">
+                            <img src={icon6} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon7} alt="icon"/>
+                        <AnimationOnScroll delay={200} animateIn="animate__wobble">
+                            <img src={icon7} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                     <div className={style.iconWrapper}>
-                        <img src={icon8} alt="icon"/>
+                        <AnimationOnScroll delay={300} animateIn="animate__wobble">
+                            <img src={icon8} alt="icon"/>
+                        </AnimationOnScroll>
                     </div>
                 </div>
             </div>

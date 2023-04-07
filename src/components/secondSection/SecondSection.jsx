@@ -6,10 +6,13 @@ import recordImg from "../../img/secondSection/record.png"
 import iconImg1 from "../../img/secondSection/icon_1.png"
 import iconImg2 from "../../img/secondSection/icon_2.png"
 import iconImg3 from "../../img/secondSection/icon_3.png"
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
-const SecondSection = () => {
+
+const SecondSection = (props) => {
     const [isSunActive, setSunActive] = useState(false);
     const [isRecordActive, setRecordActive] = useState(false);
+
 
     useEffect(() => {
         let intervalId;
@@ -34,41 +37,44 @@ const SecondSection = () => {
         setRecordActive(false)
     };
     return (
-            <div className={style.secondSectionWrapper}>
-                <div className={style.cameraBtnWrapper}>
-                    <div className={style.getToNowWrapper}>
-                        <div className={style.title}>
-                            <p>
-                                Get to know the <br/> curb better
-                            </p>
-                        </div>
-                        <div className={style.txtWrapper}>
-                            <p>
-                                Vade replaces legacy parking infrastructure with wireless cameras, <br/> computer
-                                vision,
-                                and granular
-                                analytics. We make it easy for cities <br/> to monitor and manage curb space in
-                                real-time.
-                            </p>
-                        </div>
-                        <div className={style.btnWrapper}>
-                            <button onMouseOver={sunActive} onMouseOut={sunInactive}>More about our technology</button>
-                        </div>
+        <div id={props.id} className={style.secondSectionWrapper}>
+            <div className={style.cameraBtnWrapper}>
+                <div className={style.getToNowWrapper}>
+                    <div className={style.title}>
+                        <p>
+                            Get to know the <br/> curb better
+                        </p>
                     </div>
-                    <div className={style.cameraWrapper}>
-                        <img className={style.cameraImg} src={cameraImg} alt="cameraImg"/>
-                        <div className={isSunActive ? style.sunWrapper + " " + style.sunShadow : style.sunWrapper}>
-                            <img className={isSunActive ? style.sunImg + " " + style.sunActive : style.sunImg}
-                                 src={sunImg} alt="sunImg"/>
-                        </div>
-                        <img className={isRecordActive ? style.recordImg + " " + style.recordActive : style.recordImg}
-                             src={recordImg} alt="recordImg"/>
+                    <div className={style.txtWrapper}>
+                        <p>
+                            Vade replaces legacy parking infrastructure with wireless cameras, <br/> computer
+                            vision,
+                            and granular
+                            analytics. We make it easy for cities <br/> to monitor and manage curb space in
+                            real-time.
+                        </p>
+                    </div>
+                    <div className={style.btnWrapper}>
+                        <AnimationOnScroll initiallyVisible={true} animateIn="animate__rubberBand">
+                            <button onMouseOver={sunActive} onMouseOut={sunInactive}>More about our technology</button>
+                        </AnimationOnScroll>
                     </div>
                 </div>
-                <div className={style.contentWrapper}>
+                <div className={style.cameraWrapper}>
+                    <img className={style.cameraImg} src={cameraImg} alt="cameraImg"/>
+                    <div className={isSunActive ? style.sunWrapper + " " + style.sunShadow : style.sunWrapper}>
+                        <img className={isSunActive ? style.sunImg + " " + style.sunActive : style.sunImg}
+                             src={sunImg} alt="sunImg"/>
+                    </div>
+                    <img className={isRecordActive ? style.recordImg + " " + style.recordActive : style.recordImg}
+                         src={recordImg} alt="recordImg"/>
+                </div>
+            </div>
+            <div className={style.contentWrapper}>
+                <AnimationOnScroll  animateIn="animate__bounceInUp">
                     <div className={style.contentItem}>
                         <div className={style.iconWrapper}>
-                            <img src={iconImg1} alt=""/>
+                            <img src={iconImg1} alt="iconImg1"/>
                         </div>
                         <div className={style.pWrapper1}>
                             <p>
@@ -83,9 +89,11 @@ const SecondSection = () => {
                             </p>
                         </div>
                     </div>
+                </AnimationOnScroll>
+                <AnimationOnScroll  delay={200} animateIn="animate__bounceInUp">
                     <div className={style.contentItem}>
                         <div className={style.iconWrapper}>
-                            <img src={iconImg2} alt=""/>
+                            <img src={iconImg2} alt="iconImg2"/>
                         </div>
                         <div className={style.pWrapper1}>
                             <p>
@@ -100,9 +108,11 @@ const SecondSection = () => {
                             </p>
                         </div>
                     </div>
+                </AnimationOnScroll>
+                <AnimationOnScroll delay={400}  animateIn="animate__bounceInUp">
                     <div className={style.contentItem}>
                         <div className={style.iconWrapper}>
-                            <img src={iconImg3} alt=""/>
+                            <img src={iconImg3} alt="iconImg3"/>
                         </div>
                         <div className={style.pWrapper1}>
                             <p>
@@ -116,8 +126,9 @@ const SecondSection = () => {
                             </p>
                         </div>
                     </div>
-                </div>
+                </AnimationOnScroll>
             </div>
+        </div>
     )
 }
 

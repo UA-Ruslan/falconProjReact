@@ -5,24 +5,24 @@ import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const ThirdSection = () => {
     return (
-        <AnimationOnScroll animateIn="animate__jello">
-        <div className={style.thirdSectionWrapper}>
-            <div className={style.txtWrapper}>
-                <div className={style.titleWrapper}>
-                    <p>
-                        Collect, analyze, and visualize <br/> occupancy data
-                    </p>
+        <AnimationOnScroll animateIn="animate__fadeIn">
+            <div className={style.thirdSectionWrapper}>
+                <div className={style.txtWrapper}>
+                    <div className={style.titleWrapper}>
+                        <p>
+                            Collect, analyze, and visualize <br/> occupancy data
+                        </p>
+                    </div>
+                    <div className={style.pWrapper}>
+                        <p>
+                            Visualize demand with dashboards for curb <br/> utilization and compliance.
+                        </p>
+                    </div>
                 </div>
-                <div className={style.pWrapper}>
-                    <p>
-                        Visualize demand with dashboards for curb <br/> utilization and compliance.
-                    </p>
+                <div className={style.imgWrapper}>
+                    <img src={maiImg} alt="maiImg"/>
                 </div>
             </div>
-            <div className={style.imgWrapper}>
-                <img src={maiImg} alt="maiImg"/>
-            </div>
-        </div>
         </AnimationOnScroll>
     )
 }
