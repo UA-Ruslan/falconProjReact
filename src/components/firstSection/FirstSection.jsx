@@ -89,16 +89,16 @@ const FirstSection = (props) => {
 
             </div>
             <img className={headerBtnActive ? style.imgCar1 + " " + style.newImgCar1 : style.imgCar1} src={car1}
-                 alt="img"/>
+                 alt="imgCar1"/>
             <img className={firstSectionBtnActive ? style.imgCar2 + " " + style.newImgCar2 : style.imgCar2}
                  src={car2}
-                 alt="img"/>
+                 alt="imgCar2"/>
             <img className={headerBtnActive ? style.imgCar + " " + style.newImgCar : style.imgCar} src={car}
-                 alt="img"/>
+                 alt="imgCar"/>
             <img className={firstSectionBtnActive ? style.imgBlock + " " + style.newImgBlock : style.imgBlock}
-                 src={block} alt="img"/>
+                 src={block} alt="imgBlock"/>
             <img className={firstSectionBtnActive ? style.imgBlock1 + " " + style.newImgBlock1 : style.imgBlock1}
-                 src={block1} alt="img"/>
+                 src={block1} alt="imgBlock1"/>
         </div>
     )
 }
