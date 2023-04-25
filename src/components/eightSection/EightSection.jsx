@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import style from "./EightSection.module.scss";
-import img from "../../img/eightSection/img.png"
+import img from "../../img/eightSection/img.webp"
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 

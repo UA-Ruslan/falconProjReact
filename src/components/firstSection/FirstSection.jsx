@@ -1,10 +1,10 @@
 import React, {useState} from "react"
 import style from "./FirstSection.module.scss"
-import car1 from "../../img/firstSection/car1.png"
-import car2 from "../../img/firstSection/car2.png"
-import car from "../../img/firstSection/car.png"
-import block from "../../img/firstSection/yellow_block.png"
-import block1 from "../../img/firstSection/yellow_block1.png"
+import car1 from "../../img/firstSection/car1.webp"
+import car2 from "../../img/firstSection/car2.webp"
+import car from "../../img/firstSection/car.webp"
+import block from "../../img/firstSection/yellow_block.webp"
+import block1 from "../../img/firstSection/yellow_block1.webp"
 import BurgerMenu from "../burgerMenu/BurgerMenu";
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 

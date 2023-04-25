@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Futer.module.scss";
-import mainIcon from "../../img/footer/v_icon.png"
-import facebook from "../../img/footer/facebook.png"
-import instagram from "../../img/footer/instagram.png"
-import twitter from "../../img/footer/twitter.png"
-import inImg from "../../img/footer/in_icon.png"
+import mainIcon from "../../img/footer/v_icon.webp"
+import facebook from "../../img/footer/facebook.webp"
+import instagram from "../../img/footer/instagram.webp"
+import twitter from "../../img/footer/twitter.webp"
+import inImg from "../../img/footer/in_icon.webp"
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 

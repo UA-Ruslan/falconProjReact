@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./SevenSection.module.scss";
-import photo1 from "../../img/sevenSection/photo_1.png"
-import photo2 from "../../img/sevenSection/photo_2.png"
-import photo3 from "../../img/sevenSection/photo_3.png"
+import photo1 from "../../img/sevenSection/photo_1.webp"
+import photo2 from "../../img/sevenSection/photo_2.webp"
+import photo3 from "../../img/sevenSection/photo_3.webp"
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const SevenSection = (props) => {

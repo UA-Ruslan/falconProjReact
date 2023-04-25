@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./FifthSection.module.scss";
-import icon from "../../img/fifthSection/icon_fifth_section.png";
+import icon from "../../img/fifthSection/icon_fifth_section.webp";
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 const FifthSection = () => {

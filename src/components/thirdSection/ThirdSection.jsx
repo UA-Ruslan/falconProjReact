@@ -1,5 +1,5 @@
 import React from "react";
-import maiImg from "../../img/thirdSection/analyze_date.png"
+import maiImg from "../../img/thirdSection/analyze_date.webp"
 import style from "./ThirdSection.module.scss"
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 

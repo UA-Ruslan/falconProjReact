@@ -2,10 +2,13 @@
 * {
     box-sizing: border-box;
 }
+@font-face {
+    font-family: Roboto;
+    src: url("./fonts/Roboto-Regular.ttf");
+}
 
 html {
     font-size: 15px;
-    font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -13,7 +16,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden!important;
+    overflow-x: hidden !important;
 }
 
 .app {
@@ -34,3 +37,4 @@ body::-webkit-scrollbar-thumb {
     background-color: #abcfff;
     border-radius: 20px;
 }
+

@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react"
 import style from "./SecondSection.module.scss"
-import cameraImg from "../../img/secondSection/camera.png"
-import sunImg from "../../img/secondSection/sun_ray_2.png"
-import recordImg from "../../img/secondSection/record.png"
-import iconImg1 from "../../img/secondSection/icon_1.png"
-import iconImg2 from "../../img/secondSection/icon_2.png"
-import iconImg3 from "../../img/secondSection/icon_3.png"
+import cameraImg from "../../img/secondSection/camera.webp"
+import sunImg from "../../img/secondSection/sun_ray_2.webp"
+import recordImg from "../../img/secondSection/record.webp"
+import iconImg1 from "../../img/secondSection/icon_1.webp"
+import iconImg2 from "../../img/secondSection/icon_2.webp"
+import iconImg3 from "../../img/secondSection/icon_3.webp"
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 
