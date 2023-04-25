@@ -20,7 +20,7 @@ const ThirdSection = () => {
                     </div>
                 </div>
                 <div className={style.imgWrapper}>
-                    <img src={maiImg} alt="maiImg"/>
+                    <img src={maiImg} width="100%" height="100%" alt="maiImg"/>
                 </div>
             </div>
         </AnimationOnScroll>

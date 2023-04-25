@@ -19,7 +19,7 @@ const SevenSection = (props) => {
             <div className={style.mainBlockWrapper}>
                 <div className={style.mainBlockItem}>
                     <div className={style.imgWrapper}>
-                        <img src={photo1} alt="photo1"/>
+                        <img src={photo1} width="100%" height="100%" alt="photo1"/>
                     </div>
                     <div className={style.txtBlock}>
                         <div className={style.pWrapper1}>
@@ -36,7 +36,7 @@ const SevenSection = (props) => {
                 </div>
                 <div className={style.mainBlockItem}>
                     <div className={style.imgWrapper}>
-                        <img src={photo2} alt="photo2"/>
+                        <img src={photo2} width="100%" height="100%" alt="photo2"/>
                     </div>
                     <div className={style.txtBlock}>
                         <div className={style.pWrapper1}>
@@ -53,7 +53,7 @@ const SevenSection = (props) => {
                 </div>
                 <div className={style.mainBlockItem}>
                     <div className={style.imgWrapper}>
-                        <img src={photo3} alt="photo3"/>
+                        <img src={photo3} width="100%" height="100%" alt="photo3"/>
                     </div>
                     <div className={style.txtBlock}>
                         <div className={style.pWrapper1}>

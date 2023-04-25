@@ -61,7 +61,7 @@ const SecondSection = (props) => {
                     </div>
                 </div>
                 <div className={style.cameraWrapper}>
-                    <img className={style.cameraImg} src={cameraImg} alt="cameraImg"/>
+                    <img className={style.cameraImg} src={cameraImg} width="100%" height="100%" alt="cameraImg"/>
                     <div className={isSunActive ? style.sunWrapper + " " + style.sunShadow : style.sunWrapper}>
                         <img className={isSunActive ? style.sunImg + " " + style.sunActive : style.sunImg}
                              src={sunImg} alt="sunImg"/>

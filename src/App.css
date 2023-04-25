@@ -5,6 +5,7 @@
 @font-face {
     font-family: Roboto;
     src: url("./fonts/Roboto-Regular.ttf");
+    font-display: swap;
 }
 
 html {
@@ -36,5 +37,8 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
     background-color: #abcfff;
     border-radius: 20px;
+}
+button {
+    cursor: pointer;
 }
 

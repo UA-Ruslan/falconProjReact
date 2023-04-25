@@ -31,10 +31,10 @@ const Footer = (props) => {
                             <a href="#">team@vade.ai</a>
                         </div>
                         <div className={style.imgWrapper}>
-                            <img src={facebook} alt="facebook"/>
-                            <img src={instagram} alt="instagram"/>
-                            <img src={twitter} alt="twitter"/>
-                            <img src={inImg} alt="inImg"/>
+                            <img src={facebook} width="100%" height="100%" alt="facebook"/>
+                            <img src={instagram} width="100%" height="100%" alt="instagram"/>
+                            <img src={twitter} width="100%" height="100%" alt="twitter"/>
+                            <img src={inImg} width="100%" height="100%" alt="inImg"/>
                         </div>
                         <div className={style.pWrapper1}>
                             <p>
